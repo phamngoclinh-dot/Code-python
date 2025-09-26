@@ -1,1 +1,0 @@
-{"name":"Local: SumTripZero","url":"d:\\New folder (2)\\code.py\\SumTripZero.py","tests":[{"id":1755881554277,"input":"2\n5\n0 -1 2 -3 1 \n5\n1 -2  1  0  5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\New folder (2)\\code.py\\SumTripZero.py","group":"local","local":true}

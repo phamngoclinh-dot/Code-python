@@ -1,1 +1,0 @@
-{"name":"Local: LopSoPhuc","url":"d:\\New folder (2)\\code.py\\LopSoPhuc.py","tests":[{"id":1757903175582,"input":"3\n1 2 3 4\n2 3 4 5\n1 -2 5 -6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\New folder (2)\\code.py\\LopSoPhuc.py","group":"local","local":true}

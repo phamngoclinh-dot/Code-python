@@ -1,1 +1,0 @@
-{"name":"Local: BieuThuc","url":"d:\\New folder (2)\\code.py\\BieuThuc.py","tests":[{"id":1757302282540,"input":"2\n(a + (b *c) ) + (d/e)\n( ( () ) ( () ) )","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\New folder (2)\\code.py\\BieuThuc.py","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"name":"Local: SXDaySo","url":"d:\\New folder (2)\\code.py\\SXDaySo.py","tests":[{"id":1758208990996,"input":"2\n5 3\n-1 2 3 4 -1\n4 2\n4 2 8 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\New folder (2)\\code.py\\SXDaySo.py","group":"local","local":true}
