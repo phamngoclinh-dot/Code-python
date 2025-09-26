@@ -1,0 +1,1 @@
+{"name":"Local: DoiCoSo","url":"d:\\New folder (2)\\code.py\\DoiCoSo.py","tests":[{"id":1755847778244,"input":"2\n8\n10010100010010101\n2\n10010100010010101","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\New folder (2)\\code.py\\DoiCoSo.py","group":"local","local":true}

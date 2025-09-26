@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Bán điện thoại di động</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for slider */
+        .slider {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+                    <i class="fas fa-mobile-alt mr-2"></i> TechStore
+                </a>
+            </div>
+            
+            <div class="relative w-full md:w-1/3 mb-4 md:mb-0">
+                <input type="text" placeholder="Tìm kiếm điện thoại..." 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="absolute right-3 top-2 text-gray-500">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <i class="fas fa-user text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+            </div>
+        </div>
+        
+        <nav class="bg-blue-600 text-white">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-6 py-3 overflow-x-auto">
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Trang chủ</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">iPhone</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Samsung</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Xiaomi</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Oppo</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Vivo</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Phụ kiện</a></li>
+                    <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded">Khuyến mãi</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <div class="slider bg-gray-200 mb-10">
+        <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+            <div class="container mx-auto h-full flex items-center px-4">
+                <div class="text-white max-w-lg">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">iPhone 14 Pro Max</h1>
+                    <p class="text-xl mb-6">Trải nghiệm công nghệ màn hình Dynamic Island đột phá</p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium inline-block">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+            <div class="container mx-auto h-full flex items-center px-4">
+                <div class="text-white max-w-lg">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Samsung Galaxy S23 Ultra</h1>
+                    <p class="text-xl mb-6">Camera 200MP chụp ảnh siêu nét, bút S Pen tiện lợi</p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium inline-block">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1611791484670-ce19b801d192?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+            <div class="container mx-auto h-full flex items-center px-4">
+                <div class="text-white max-w-lg">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Xiaomi 13 Pro</h1>
+                    <p class="text-xl mb-6">Hiệu năng mạnh mẽ với Snapdragon 8 Gen 2</p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium inline-block">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 mb-12">
+        <!-- Featured Products -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Sản phẩm nổi bật</h2>
+                <a href="#" class="text-blue-600 hover:underline">Xem tất cả</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1611791484670-ce19b801d192?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="iPhone 14 Pro Max" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-10%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">iPhone 14 Pro Max</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(128 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">29.990.000đ</span>
+                                <span class="text-red-500 font-bold text-lg block">26.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Samsung Galaxy S23 Ultra" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Samsung Galaxy S23 Ultra</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(95 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-red-500 font-bold text-lg block">24.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Xiaomi 13 Pro" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">Mới</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Xiaomi 13 Pro</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(76 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-red-500 font-bold text-lg block">19.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Oppo Find X5 Pro" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Oppo Find X5 Pro</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(64 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-red-500 font-bold text-lg block">21.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Categories -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8">Danh mục sản phẩm</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="bg-white rounded-lg shadow-md p-6 text-center hover:bg-blue-50 transition-colors">
+                    <div class="text-blue-600 mb-3">
+                        <i class="fab fa-apple text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold">iPhone</h3>
+                    <p class="text-gray-600 text-sm">32 sản phẩm</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg shadow-md p-6 text-center hover:bg-blue-50 transition-colors">
+                    <div class="text-blue-600 mb-3">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold">Samsung</h3>
+                    <p class="text-gray-600 text-sm">28 sản phẩm</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg shadow-md p-6 text-center hover:bg-blue-50 transition-colors">
+                    <div class="text-blue-600 mb-3">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold">Xiaomi</h3>
+                    <p class="text-gray-600 text-sm">25 sản phẩm</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg shadow-md p-6 text-center hover:bg-blue-50 transition-colors">
+                    <div class="text-blue-600 mb-3">
+                        <i class="fas fa-headphones text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold">Phụ kiện</h3>
+                    <p class="text-gray-600 text-sm">45 sản phẩm</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- New Arrivals -->
+        <section>
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Sản phẩm mới</h2>
+                <a href="#" class="text-blue-600 hover:underline">Xem tất cả</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b893731aff7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vivo X90 Pro" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">Mới</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Vivo X90 Pro</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(42 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-red-500 font-bold text-lg block">18.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592754862816-1a21a4ea2281?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="OnePlus 11" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">OnePlus 11</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(38 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-red-500 font-bold text-lg block">16.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603921326210-6edd2d60ca68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Realme GT Neo 5" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-15%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Realme GT Neo 5</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(29 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">12.990.000đ</span>
+                                <span class="text-red-500 font-bold text-lg block">10.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Asus ROG Phone 6" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Asus ROG Phone 6</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(51 đánh giá)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-red-500 font-bold text-lg block">22.990.000đ</span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-mobile-alt mr-2"></i> TechStore
+                    </h3>
+                    <p class="text-gray-400 mb-4">Chuyên cung cấp các sản phẩm điện thoại di động chính hãng với giá tốt nhất thị trường.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Về chúng tôi</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Giới thiệu</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tuyển dụng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Hệ thống cửa hàng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hỗ trợ khách hàng</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Câu h hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liên hệ</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Đường ABC, Quận 1, TP.HCM
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone-alt mr-2"></i> 1900 1234
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i> info@techstore.vn
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-clock mr-2"></i> 8:00 - 22:00 (T2 - CN)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 TechStore. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <img src="https://via.placeholder.com/50x30" alt="Visa" class="h-8">
+                    <img src="https://via.placeholder.com/50x30" alt="Mastercard" class="h-8">
+                    <img src="https://via.placeholder.com/50x30" alt="Paypal" class="h-8">
+                    <img src="https://via.placeholder.com/50x30" alt="Momo" class="h-8">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+            
+            // Auto slide every 5 seconds
+            setInterval(nextSlide, 5000);
+            
+            // Product card hover effect
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
